@@ -1,3 +1,4 @@
+#CCC '00 J4 - Babbling Brooks
 num_streams = int(input())
 stream_list = [] # the value of the num in the list repersent the flow of the rivers, the index of the list repersent the river number. Indexes auto update from left to right so the streams will always be the right number
 for interations in range(0,num_streams):
