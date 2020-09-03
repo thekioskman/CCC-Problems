@@ -1,0 +1,32 @@
+counter = 0
+temp_counter = 0
+output = []
+for loops in range(5):
+  line = input().split(" ")
+  for word in line:
+    if "'" in word:
+      index = word.find("'")
+      for char in range(index):
+        if word[char].isalpha():
+          temp_counter += 1
+      if temp_counter > 3:
+        counter += 1
+      temp_counter = 0
+      for char in range(index,len(word)):
+        if word[char].isalpha():
+          temp_counter += 1
+      if temp_counter > 3:
+        counter += 1
+      temp_counter = 0  
+    else:
+      for char in word:
+        if char.isalpha():
+          temp_counter += 1
+      if temp_counter > 3: 
+        counter += 1 
+      temp_counter = 0
+  output.append(counter)
+  counter = 0 
+
+for num in output:
+  print(num)
